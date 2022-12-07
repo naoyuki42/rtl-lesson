@@ -72,7 +72,7 @@ export const customCounterSlice = createSlice({
   },
 });
 
-export const { increment, decrement, incrementByAmount, extraReducers } =
+export const { increment, decrement, incrementByAmount } =
   customCounterSlice.actions;
 
 export const selectCustomCount = (state) => state.customCounter.value;
