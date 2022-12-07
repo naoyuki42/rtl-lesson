@@ -68,6 +68,9 @@ export const customCounterSlice = createSlice({
       builder.addCase(fetchJson.fulfilled, (state, action) => {
         state.username = action.payload;
       });
+      builder.addCase(fetchJson.rejected, (state, action) => {
+        state.username = "anonymous";
+      });
     },
   },
 });
