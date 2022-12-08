@@ -13,8 +13,7 @@ describe("ExtraReducers", () => {
     const action = { type: fetchDummy.fulfilled.type, payload: 5 };
     const state = reducer(initialState, action);
     // 期待値の検証
-    // TODO:テストが失敗するため、コメントアウト
-    // expect(state.value).toEqual(105);
+    expect(state.value).toEqual(105);
   });
 
   it("Should Output 100 - Payload When Rejected", async () => {
@@ -22,7 +21,6 @@ describe("ExtraReducers", () => {
     const action = { type: fetchDummy.rejected.type, payload: 5 };
     const state = reducer(initialState, action);
     // 期待値の検証
-    // TODO:テストが失敗するため、コメントアウト
-    // expect(state.value).toEqual(95);
+    expect(state.value).toEqual(95);
   });
 });
