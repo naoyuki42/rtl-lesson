@@ -8,7 +8,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import customCounterSlice from "../features/customCounter/customCounterSlice";
 import ReduxAsync from "../targets/ReduxAsync";
 
-describe("ReduxAsync Integration Test", () => {
+describe("Redux Async Integration Test", () => {
   // 前処理の記述
   let testStore;
   beforeEach(() => {
@@ -28,6 +28,7 @@ describe("ReduxAsync Integration Test", () => {
     );
     // イベントの指定
     await userEvent.click(screen.getByText("FetchDummy"));
+    // 期待値の検証
     expect(await screen.findByTestId("count-value")).toHaveTextContent("105");
   });
 });
