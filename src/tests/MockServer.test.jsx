@@ -24,7 +24,7 @@ describe("Mocking API", () => {
     // コンポーネントのレンダリング
     render(<MockServer />);
     // イベントの指定
-    userEvent.click(screen.getByRole("button"));
+    await userEvent.click(screen.getByRole("button"));
     // 期待値の検証
     expect(await screen.findByRole("heading")).toHaveTextContent("Bred dummy");
     expect(screen.getByRole("button")).toHaveAttribute("disabled");
