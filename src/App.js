@@ -7,6 +7,7 @@ import FrameworkList from "./targets/FrameworkList";
 import MockServer from "./targets/MockServer";
 import Redux from "./targets/Redux";
 import ReduxAsync from "./targets/ReduxAsync";
+import CustomHooks from "./targets/CustomHooks";
 
 function App() {
   const data = [
@@ -25,6 +26,7 @@ function App() {
         <MockServer />
         <Redux />
         <ReduxAsync />
+        <CustomHooks />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
